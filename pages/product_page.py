@@ -16,3 +16,10 @@ class ProductPage(BasePage):
         expected_book_name = self.browser.find_element(*ProductPageLocators.MESSAGE_ADD_TO_CART_BOOK_NAME).text
         actual_book_name = self.browser.find_element(*ProductPageLocators.ACTUAL_BOOK_NAME).text
         assert expected_book_name == actual_book_name, "Added to cart book name incorrect "
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.MESSAGE_ADD_TO_CART), \
+            "Success message is presented, but should not be"
+    def should_be_message_disappeared_after_awhile(self):
+        assert self.is_disappeared(*ProductPageLocators.MESSAGE_ADD_TO_CART), \
+            "Success message is presented, but should not be"
