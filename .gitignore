@@ -430,4 +430,5 @@ out/
 .idea/.idea.WhOffBalance/.idea/inspectionProfiles/Project_Default.xml
 .idea/.idea.WhOffBalance/.idea/.name
 
-selenium_env
+hands_on_pytest_env
+.idea/
